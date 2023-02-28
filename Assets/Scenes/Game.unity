@@ -225,6 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc870080ea0468448a4ec258ba87307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &194290574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4753466492845412, guid: 867da2ed13811b347a09b4756abcd004, type: 3}
+  m_PrefabInstance: {fileID: 139149042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &457752700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,8 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
-  _time: 1
+  _playerShipPos: {fileID: 194290574}
   _radius: 3
+  _time: 1
 --- !u!1 &679329952
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,8 +900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
-  _time: 1
+  _playerShipPos: {fileID: 194290574}
   _radius: 3
+  _time: 1
 --- !u!4 &1028723155
 Transform:
   m_ObjectHideFlags: 0
@@ -1473,8 +1480,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
-  _time: 1
+  _playerShipPos: {fileID: 194290574}
   _radius: 3
+  _time: 1
 --- !u!4 &1882994928
 Transform:
   m_ObjectHideFlags: 0

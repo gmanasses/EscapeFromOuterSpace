@@ -5,8 +5,9 @@ public class EnemyGenerator : MonoBehaviour {
 
     // --- Private Declarations ---
     [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] private float _time;
+    [SerializeField] private Transform _playerShipPos;
     [SerializeField] private float _radius;
+    [SerializeField] private float _time;
 
 
     // --- Core Functions ---
@@ -26,6 +27,7 @@ public class EnemyGenerator : MonoBehaviour {
     private void Instantiate() {
         GameObject enemy = GameObject.Instantiate(_enemyPrefab);
         SetEnemyPosition(enemy);
+        enemy.GetComponent<HuntPlayer>().SetTarget(_playerShipPos);
     }
 
     private void SetEnemyPosition(GameObject enemy) {
