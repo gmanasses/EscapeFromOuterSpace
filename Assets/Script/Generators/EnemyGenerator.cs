@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour {
 
     // --- Private Declarations ---
     [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private Score _score;
     [SerializeField] private Transform _playerShipPos;
     [SerializeField] private float _radius;
     [SerializeField] private float _time;
@@ -21,6 +21,7 @@ public class EnemyGenerator : MonoBehaviour {
         GameObject enemy = GameObject.Instantiate(_enemyPrefab);
         SetEnemyPosition(enemy);
         enemy.GetComponent<HuntPlayer>().SetTarget(_playerShipPos);
+        enemy.GetComponent<Scoreable>().SetScore(_score);
     }
 
     private void SetEnemyPosition(GameObject enemy) {
