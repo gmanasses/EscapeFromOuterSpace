@@ -12,18 +12,11 @@ public class EnemyGenerator : MonoBehaviour {
 
     // --- Core Functions ---
     private void Start() {
-        StartCoroutine(StartGeneration());
+        InvokeRepeating("Instantiate", 0f, _time);
     }
 
 
     // --- Functions ---
-    private IEnumerator StartGeneration() {
-        while(true) {
-            yield return new WaitForSeconds(_time);
-            Instantiate();
-        }
-    }
-
     private void Instantiate() {
         GameObject enemy = GameObject.Instantiate(_enemyPrefab);
         SetEnemyPosition(enemy);

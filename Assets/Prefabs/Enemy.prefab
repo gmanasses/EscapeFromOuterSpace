@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 50205125132585506}
   - component: {fileID: 61919170566903102}
   - component: {fileID: 9129965414127639393}
+  - component: {fileID: 1031770175717178399}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -147,3 +148,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
+  _huntForce: 1
+--- !u!114 &1031770175717178399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134229065056836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2635ec0cfcf6140b8d15f8b7f51b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _whenCollides:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1031770175717178399}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: DestroyEnemy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
