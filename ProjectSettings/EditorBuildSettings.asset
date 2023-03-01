@@ -15,4 +15,4 @@ EditorBuildSettings:
     path: Assets/Scenes/Ranking.unity
     guid: 93f4f157a426ac9468e7e4d724ac938a
   m_configObjects:
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 58f54c9892798c042812b898948afa40, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 73dbb5e9ee38ef64c9bba2747b955c4e, type: 2}
