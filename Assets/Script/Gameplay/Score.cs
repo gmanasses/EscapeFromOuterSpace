@@ -4,9 +4,18 @@ using UnityEngine.Events;
 
 public class Score : MonoBehaviour {
 
+    // --- Public Declarations ---
+    public int TotalScore { get { return _score; } }
+
     // --- Private Declarations ---
     [SerializeField] CustomEventInt _whenScores;
     private int _score;
+
+
+    // --- Functions ---
+    private void Start() {
+        GameObject.DontDestroyOnLoad(this.gameObject);
+    }
 
 
     // --- Functions ---
@@ -17,7 +26,6 @@ public class Score : MonoBehaviour {
 
 }
 
-[Serializable]
-public class CustomEventInt : UnityEvent<int> {
 
-}
+[Serializable]
+public class CustomEventInt : UnityEvent<int> { }
