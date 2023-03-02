@@ -6,6 +6,7 @@ public class RankingNewScore : MonoBehaviour {
     [SerializeField] private DynamicText _scoreText;
     [SerializeField] private RankingController _rankingController;
     private Score _score;
+    private int _id;
 
 
     // --- Core Functions ---
@@ -18,7 +19,10 @@ public class RankingNewScore : MonoBehaviour {
         }
 
         _scoreText.UpdateText(totalScore);
-        _rankingController.AddScoreToList(totalScore);
+        _id = _rankingController.AddScoreToList("Name", totalScore);
     }
 
+    public void ChangeName(string newName) {
+        _rankingController.ChangeName(_id, newName);
+    }
 }

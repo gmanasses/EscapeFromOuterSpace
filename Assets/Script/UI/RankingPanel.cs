@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 public class RankingPanel : MonoBehaviour {
@@ -9,12 +10,13 @@ public class RankingPanel : MonoBehaviour {
 
     // --- Core Functions ---
     private void Start() {
-        int amount = _ranking.NumberOfRankedInList();
-        for(int i=0; i<amount; i++) {
+        ReadOnlyCollection<Ranked> listOfRankeds = _ranking.GetRankeds();
+
+        for(int i=0; i<listOfRankeds.Count; i++) {
             if(i > 5) { break; }
+
             GameObject ranked = GameObject.Instantiate(_prefabRanked, this.transform);
-            ranked.GetComponent<RankedItem>().ConfigureText(i, 999, "teste");
+            ranked.GetComponent<RankedItem>().ConfigureText(i, listOfRankeds[i].Score, listOfRankeds[i].Name);
         }
     }
-
 }

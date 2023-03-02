@@ -13,5 +13,4 @@ public class RankedItem : MonoBehaviour {
         _textScore.text = score.ToString();
         _textName.text = name;
     }
-
 }

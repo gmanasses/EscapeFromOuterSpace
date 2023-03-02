@@ -18,4 +18,7 @@ public class DynamicText : MonoBehaviour {
         _text.text = number.ToString();
     }
 
+    public void UpdateText(string newText) {
+        _text.text = newText;
+    }
 }
