@@ -77,8 +77,7 @@ public class Ranked : IComparable {
     }
 
     public int CompareTo(object obj) {
-        Ranked otherObj = obj as Ranked;
+        var otherObj = obj as Ranked;
         return otherObj.Score.CompareTo(this.Score);
     }
-
 }
