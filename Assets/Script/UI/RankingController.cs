@@ -31,8 +31,8 @@ public class RankingController : MonoBehaviour {
         return _rankedList.AsReadOnly();
     }
 
-    public int AddScoreToList(string name, int score) {
-        int id = _rankedList.Count;
+    public string AddScoreToList(string name, int score) {
+        string id = Guid.NewGuid().ToString();
         Ranked newRanked = new Ranked(id, name, score);
 
         _rankedList.Add(newRanked);
@@ -42,7 +42,7 @@ public class RankingController : MonoBehaviour {
         return id;
     }
 
-    public void ChangeName(int id, string newName) {
+    public void ChangeName(string id, string newName) {
         foreach(Ranked ranked in _rankedList) {
             if(ranked.Id == id) {
                 ranked.Name = newName;
@@ -64,13 +64,13 @@ public class RankingController : MonoBehaviour {
 public class Ranked : IComparable {
 
     // --- Public Declarations ---
-    public int Id;
+    public string Id;
     public int Score;
     public string Name;
 
 
     // --- Functions ---
-    public Ranked(int id, string name, int score) {
+    public Ranked(string id, string name, int score) {
         Id = id;
         Name = name;
         Score = score;

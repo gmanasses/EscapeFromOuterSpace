@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RankingNewScore : MonoBehaviour {
@@ -6,7 +7,7 @@ public class RankingNewScore : MonoBehaviour {
     [SerializeField] private DynamicText _scoreText;
     [SerializeField] private RankingController _rankingController;
     private Score _score;
-    private int _id;
+    private string _id;
 
 
     // --- Core Functions ---
