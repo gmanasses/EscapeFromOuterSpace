@@ -4,6 +4,7 @@ public class RankingNewScore : MonoBehaviour {
 
     // --- Private Declarations ---
     [SerializeField] private DynamicText _scoreText;
+    [SerializeField] private RankingController _rankingController;
     private Score _score;
 
 
@@ -17,6 +18,7 @@ public class RankingNewScore : MonoBehaviour {
         }
 
         _scoreText.UpdateText(totalScore);
+        _rankingController.AddScoreToList(totalScore);
     }
 
 }
