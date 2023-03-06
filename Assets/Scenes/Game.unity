@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 61276168237055288, guid: 867da2ed13811b347a09b4756abcd004, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114245909540524810, guid: 867da2ed13811b347a09b4756abcd004, type: 3}
       propertyPath: aoBater.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -243,11 +243,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_Name
-      value: Fixed Barrier 1
+      value: Mobile Meteor 1
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalScale.x
@@ -259,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8968916
+      value: 5.45
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48835444
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -495,7 +495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_Name
-      value: Fixed Barrier
+      value: Fixed Meteor
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_RootOrder
@@ -565,8 +565,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 740506483}
-  - {fileID: 457752701}
   - {fileID: 1634699635}
+  - {fileID: 457752701}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1060,6 +1060,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344085548}
   m_CullTransparentMesh: 1
+--- !u!1 &1570095341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
+  m_PrefabInstance: {fileID: 457752700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570095345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570095341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb502e84653388d46a3b16abd668ef45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amplitude: 3
+  _velocity: 0.025
 --- !u!1 &1572548059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,11 +1314,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_Name
-      value: Fixed Barrier 2
+      value: Mobile Meteor
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalScale.x
@@ -1311,11 +1330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.073108
+      value: -3.98
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.30835444
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1344,6 +1363,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
   m_PrefabInstance: {fileID: 1634699634}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1634699636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
+  m_PrefabInstance: {fileID: 1634699634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1634699637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634699636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb502e84653388d46a3b16abd668ef45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amplitude: 3
+  _velocity: 0.025
 --- !u!1 &1730725130
 GameObject:
   m_ObjectHideFlags: 0

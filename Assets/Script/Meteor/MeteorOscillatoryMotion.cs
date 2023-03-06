@@ -3,9 +3,9 @@ using UnityEngine;
 public class MeteorOscillatoryMotion : MonoBehaviour {
 
     // --- Private Declarations ---
-    [SerializeField] private Vector3 _initalPosition;
     [SerializeField] private float _amplitude;
-    [SerializeField] private float _velocity;
+    [SerializeField][Range(0, 0.1f)] private float _velocity;
+    private Vector3 _initalPosition;
     private float _angle;
 
 
