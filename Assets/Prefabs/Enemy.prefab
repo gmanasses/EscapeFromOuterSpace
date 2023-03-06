@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 212802863280211838}
   - component: {fileID: 50205125132585506}
   - component: {fileID: 61919170566903102}
-  - component: {fileID: 9129965414127639393}
   - component: {fileID: 1031770175717178399}
   - component: {fileID: 250253278001005867}
+  - component: {fileID: -5188590820488448439}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -136,20 +136,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18593287, y: 0.185933}
   m_EdgeRadius: 0
---- !u!114 &9129965414127639393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134229065056836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08bbe1ef36b32bd41ad83f12637346a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 0}
-  _huntForce: 1
 --- !u!114 &1031770175717178399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,12 +148,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2635ec0cfcf6140b8d15f8b7f51b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _huntForce: 1.8
+  _target: {fileID: 0}
   _whenCollides:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1031770175717178399}
-        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
-        m_MethodName: DestroyEnemy
+      - m_Target: {fileID: -5188590820488448439}
+        m_TargetAssemblyTypeName: EnemyPoolObject, Assembly-CSharp
+        m_MethodName: PutEnemyInPoolAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -199,5 +187,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d89c33a0ecf5ec74eb5727e3174082bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5188590820488448439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134229065056836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febb062712df20e4bb9a477dd68867dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61276168237055288, guid: 867da2ed13811b347a09b4756abcd004, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114245909540524810, guid: 867da2ed13811b347a09b4756abcd004, type: 3}
       propertyPath: aoBater.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -288,6 +292,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
   m_PrefabInstance: {fileID: 457752700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &515603677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515603678}
+  - component: {fileID: 515603679}
+  m_Layer: 0
+  m_Name: Enemy Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &515603678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515603677}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 481.48987, y: 263.6129, z: -5.3691454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 941569667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515603679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515603677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1145788acc986e4498482075019ac579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
+  _amountOfEnemyToSpawn: 10
 --- !u!1 &563932336
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +368,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 941569667}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &563932338
 MonoBehaviour:
@@ -332,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _poolOfEnemies: {fileID: 515603679}
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
   _score: {fileID: 2005713689}
   _playerShipPos: {fileID: 194290574}
@@ -588,6 +639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 515603678}
   - {fileID: 563932337}
   - {fileID: 1028723155}
   - {fileID: 1882994928}
@@ -831,6 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _poolOfEnemies: {fileID: 515603679}
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
   _score: {fileID: 2005713689}
   _playerShipPos: {fileID: 194290574}
@@ -849,7 +902,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 941569667}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275777249
 GameObject:
@@ -1412,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _poolOfEnemies: {fileID: 515603679}
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11, type: 3}
   _score: {fileID: 2005713689}
   _playerShipPos: {fileID: 194290574}
@@ -1430,7 +1484,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 941569667}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005713688
 GameObject:

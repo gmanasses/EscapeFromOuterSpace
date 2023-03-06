@@ -3,6 +3,7 @@
 public class EnemyGenerator : MonoBehaviour {
 
     // --- Private Declarations ---
+    [SerializeField] private EnemyPool _poolOfEnemies;
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private Score _score;
     [SerializeField] private Transform _playerShipPos;
@@ -18,10 +19,12 @@ public class EnemyGenerator : MonoBehaviour {
 
     // --- Functions ---
     private void Instantiate() {
-        GameObject enemy = GameObject.Instantiate(_enemyPrefab);
-        SetEnemyPosition(enemy);
-        enemy.GetComponent<HuntPlayer>().SetTarget(_playerShipPos);
-        enemy.GetComponent<Scoreable>().SetScore(_score);
+        if(_poolOfEnemies.thereIsEnemyAvailable()) {
+            GameObject enemy = _poolOfEnemies.GetEnemyFromPool();
+            SetEnemyPosition(enemy);
+            enemy.GetComponent<EnemyController>().SetTarget(_playerShipPos);
+            enemy.GetComponent<Scoreable>().SetScore(_score);
+        }
     }
 
     private void SetEnemyPosition(GameObject enemy) {
