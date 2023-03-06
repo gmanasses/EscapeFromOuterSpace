@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2635ec0cfcf6140b8d15f8b7f51b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _huntForce: 1.8
+  _huntForce: 3
   _target: {fileID: 0}
   _whenCollides:
     m_PersistentCalls:

@@ -7,13 +7,20 @@ public class EnemyGenerator : MonoBehaviour {
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private Score _score;
     [SerializeField] private Transform _playerShipPos;
-    [SerializeField] private float _radius;
     [SerializeField] private float _time;
+    [SerializeField] private Rect _area;
 
 
     // --- Core Functions ---
     private void Start() {
         InvokeRepeating("Instantiate", 0f, _time);
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = new Color(100, 0, 100);
+
+        Vector3 pos = (Vector3)_area.position + (Vector3)_area.size/2 + this.transform.position;
+        Gizmos.DrawWireCube(pos, _area.size);
     }
 
 
@@ -28,9 +35,11 @@ public class EnemyGenerator : MonoBehaviour {
     }
 
     private void SetEnemyPosition(GameObject enemy) {
-        Vector3 randomPosition = new Vector3(Random.Range(-_radius, _radius), Random.Range(-_radius, _radius), 0);
+        float randomPosX = Random.Range(_area.x, _area.x + _area.width);
+        float randomPosY = Random.Range(_area.y, _area.y + _area.height);
+        Vector2 randomPos = new Vector2(randomPosX, randomPosY);
 
-        Vector3 enemyPos = this.transform.position + randomPosition;
+        Vector3 enemyPos = this.transform.position + (Vector3)randomPos;
         enemy.transform.position = enemyPos;
     }
 
